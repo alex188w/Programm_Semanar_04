@@ -48,18 +48,22 @@ void Zadacha_30()
 // массив из 8 элементов, заполненный нулями и единицами в случайном порядке.
 
 {
-    int[] massive = new int[5]; 
-    int length = massive.Length;
+    
+    int size = 8;
+    int[] massive = new int[size]; 
     int index = 0;
-
-    while (index < length)
+    Console.Write("[ ");
+    DateTime lastTime = DateTime.Now; // вывод времени, за которое сработала программа
+    while (index < size)
     {
         massive[index] = new Random().Next(0, 2); 
         Console.Write(massive[index] + " ");
         index++;    
     }
+    Console.Write("]");
+    Console.WriteLine(DateTime.Now - lastTime); // вывод времени, за которое сработала программа 
+    Console.WriteLine(" ");
 }
-
 
 //Zadacha_24();
 // Zadacha_26();
